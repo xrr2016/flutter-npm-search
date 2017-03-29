@@ -1,7 +1,7 @@
 {
   "name": "react-curd",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
   "dependencies": {
     "react": "^15.4.2",
     "react-dom": "^15.4.2"

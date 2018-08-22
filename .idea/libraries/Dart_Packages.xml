@@ -86,13 +86,6 @@
             </list>
           </value>
         </entry>
-        <entry key="flutter_web_view">
-          <value>
-            <list>
-              <option value="/Library/flutter/.pub-cache/hosted/pub.flutter-io.cn/flutter_web_view-0.0.2/lib" />
-            </list>
-          </value>
-        </entry>
         <entry key="front_end">
           <value>
             <list>
@@ -393,7 +386,6 @@
       <root url="file:///Library/flutter/.pub-cache/hosted/pub.flutter-io.cn/crypto-2.0.3/lib" />
       <root url="file:///Library/flutter/.pub-cache/hosted/pub.flutter-io.cn/csslib-0.14.4/lib" />
       <root url="file:///Library/flutter/.pub-cache/hosted/pub.flutter-io.cn/cupertino_icons-0.1.2/lib" />
-      <root url="file:///Library/flutter/.pub-cache/hosted/pub.flutter-io.cn/flutter_web_view-0.0.2/lib" />
       <root url="file:///Library/flutter/.pub-cache/hosted/pub.flutter-io.cn/front_end-0.1.0-alpha.12/lib" />
       <root url="file:///Library/flutter/.pub-cache/hosted/pub.flutter-io.cn/glob-1.1.5/lib" />
       <root url="file:///Library/flutter/.pub-cache/hosted/pub.flutter-io.cn/html-0.13.3/lib" />

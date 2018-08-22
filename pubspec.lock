@@ -81,13 +81,6 @@ packages:
     description: flutter
     source: sdk
     version: "0.0.0"
-  flutter_web_view:
-    dependency: "direct main"
-    description:
-      name: flutter_web_view
-      url: "https://pub.flutter-io.cn"
-    source: hosted
-    version: "0.0.2"
   front_end:
     dependency: transitive
     description:

@@ -7,41 +7,54 @@ Request request = new Request();
 class DetailPage extends StatefulWidget {
   final String name;
 
-  DetailPage(this.name);
+  DetailPage([this.name = '']);
 
   @override
   _DetailPageState createState() => _DetailPageState(name);
 }
 
 class _DetailPageState extends State<DetailPage> {
-  final String name;
+  Detail _detail;
+  String _name = '';
+  bool _isLoading = true;
 
-  _DetailPageState(this.name);
-
-  String title = 'Detail';
+  _DetailPageState(this._name);
 
   @override
   void initState() {
     super.initState();
-    print('start: ---------------');
-
-    request.getPackageDetail('$name').then((Detail detail) {
-      print(detail.analyzedAt);
+    request.getPackageDetail(_name).then((Detail detail) {
       setState(() {
-        title = detail.analyzedAt;
+        _detail = detail;
+        _isLoading = false;
+        print(_detail.collected['metadata']['version']);
       });
     });
-
-    print('end: ---------------');
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('$title'),
+        title: Text(_name),
       ),
-      body: Container(child: Text('detail')),
+      body: AnimatedCrossFade(
+        firstChild: Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: Column(
+            mainAxisSize: MainAxisSize.max,
+            children: <Widget>[
+              Text('Score: ${_detail.score['final']}'),
+              Text('Version: ${_detail.collected['metadata']['version']}'),
+            ],
+          ),
+        ),
+        secondChild: Center(
+          child: CircularProgressIndicator(),
+        ),
+        duration: Duration(milliseconds: 300),
+        crossFadeState: _isLoading ? CrossFadeState.showSecond : CrossFadeState.showFirst,
+      ),
     );
   }
 }

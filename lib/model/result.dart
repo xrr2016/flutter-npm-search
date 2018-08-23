@@ -1,14 +1,16 @@
 class Result {
-  final Map<String, dynamic> package;
-  final Map<String, dynamic> score;
+  final String name;
+  final String description;
+  final double score;
   final double searchScore;
 
-  Result({this.package, this.score, this.searchScore});
+  Result({this.name, this.description, this.score, this.searchScore});
 
   factory Result.fromJson(Map<String, dynamic> json) {
     return Result(
-      package: json['package'] as Map,
-      score: json['score'] as Map,
+      name: json['package']['name'] as String,
+      description: json['package']['description'] as String,
+      score: json['score']['final'] as double,
       searchScore: json['searchScore'] as double,
     );
   }

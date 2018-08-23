@@ -22,13 +22,11 @@ class Request {
     int size = 20,
   ]) async {
     final response = await http.get(baseUrl + '/search?q=$q$filter&from=$from&size=$size');
-    print(baseUrl + '/search?q=$q$filter&from=$from&size=$size --------------');
-
     final data = json.decode(response.body);
 
-    final results = data['results'].map((json) {
+    List results = data['results'].map((json) {
       return Result.fromJson(json);
-    });
+    }).toList();
 
     return {
       'total': data['total'] as int,

@@ -1,5 +1,3 @@
-import 'dart:async';
-
 import 'package:flutter/material.dart';
 import 'package:flutter_npm_search/page/detail.dart';
 import 'package:flutter_npm_search/page/search.dart';
@@ -14,8 +12,6 @@ class NpmSearchApp extends StatefulWidget {
 }
 
 class _NpmSearchAppState extends State<NpmSearchApp> {
-  String name;
-
   @override
   Widget build(BuildContext context) {
     return new MaterialApp(
@@ -26,7 +22,7 @@ class _NpmSearchAppState extends State<NpmSearchApp> {
       initialRoute: '/',
       routes: {
         '/': (context) => SearchPage(),
-        '/detail': (context) => DetailPage(name),
+        '/detail': (context) => DetailPage(),
       },
       debugShowCheckedModeBanner: false,
     );

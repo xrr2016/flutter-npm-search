@@ -1,13 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_npm_search/model/history.dart';
 import 'package:flutter_npm_search/model/result.dart';
+import 'package:flutter_npm_search/model/suggestion.dart';
 import 'package:flutter_npm_search/page/detail.dart';
 import 'package:flutter_npm_search/request/request.dart';
 import 'package:flutter_npm_search/widget/card_result.dart';
 
 Request request = new Request();
-
-enum searchStatus { beforeSearch, searching, afterSearch }
 
 class SearchPage extends StatefulWidget {
   @override
@@ -18,11 +17,22 @@ class _SearchPageState extends State<SearchPage> {
   int _total = 0;
   List _results = [];
   bool _isSearching = false;
+  List<Suggestion> _suggestions = <Suggestion>[];
   TextEditingController _textEditingController = new TextEditingController();
 
   @override
   void initState() {
     super.initState();
+  }
+
+  void showSuggestions() {}
+
+  void showSnackBar(int total) {
+    Scaffold.of(context).showSnackBar(
+      SnackBar(
+        content: Text(_total.toString()),
+      ),
+    );
   }
 
   @override
@@ -58,6 +68,7 @@ class _SearchPageState extends State<SearchPage> {
           ),
           onChanged: (val) {
             print('Change: $val');
+            showSuggestions();
           },
           onSubmitted: (String val) {
             setState(() {
@@ -66,18 +77,20 @@ class _SearchPageState extends State<SearchPage> {
             if (val.isNotEmpty) {
               request.getSearchResults(val).then((res) {
                 setState(() {
+                  print(res['total']);
                   _total = res['total'];
                   _results = res['results'];
                   _isSearching = false;
                 });
                 _textEditingController.clear();
+                showSnackBar(_total);
               });
             }
           },
         ),
         actions: <Widget>[
           IconButton(
-            icon: Icon(Icons.filter_list),
+            icon: Icon(Icons.more_vert),
             iconSize: 28.0,
             onPressed: () {
 //              Navigator.push(context, MaterialPageRoute(builder: (context) => DetailPage('react')));
@@ -144,4 +157,3 @@ class ChipHistory extends StatelessWidget {
     );
   }
 }
-//        secondChild: Center(child: CircularProgressIndicator()),

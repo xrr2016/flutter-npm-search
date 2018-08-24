@@ -1,8 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_npm_search/model/history.dart';
-import 'package:flutter_npm_search/model/result.dart';
-import 'package:flutter_npm_search/model/suggestion.dart';
-import 'package:flutter_npm_search/page/detail.dart';
 import 'package:flutter_npm_search/request/request.dart';
 import 'package:flutter_npm_search/widget/card_result.dart';
 
@@ -15,48 +11,108 @@ class SearchPage extends StatefulWidget {
 
 class _SearchPageState extends State<SearchPage> {
   int _total = 0;
+  int _pageIndex = 0;
+  String _input = '';
+  String _prev_input = '';
   List _results = [];
   bool _isSearching = false;
-  List<Suggestion> _suggestions = <Suggestion>[];
+  bool _isLoadingMore = false;
+
+//  List<Suggestion> _suggestions = <Suggestion>[];
   TextEditingController _textEditingController = new TextEditingController();
+  ScrollController _listViewController = new ScrollController();
 
   @override
   void initState() {
     super.initState();
   }
 
-  void showSuggestions() {}
-
-  void showSnackBar(int total) {
-    Scaffold.of(context).showSnackBar(
-      SnackBar(
-        content: Text(_total.toString()),
-      ),
-    );
+  void _searchResults() {
+    if (_input.isEmpty || _input == '') {
+      return;
+    }
+    if (_input == _prev_input) {
+      return;
+    }
+    setState(() {
+      _isSearching = true;
+      _prev_input = _input;
+      _results.clear();
+    });
+    request.getSearchResults(_input, _pageIndex).then((res) {
+      setState(() {
+        _total = res['total'];
+        for (var item in res['results']) {
+          _results.add(item);
+        }
+        _isSearching = false;
+      });
+      _textEditingController.clear();
+    }).catchError((err) {
+      setState(() {
+        _isSearching = false;
+      });
+      new SimpleDialog(
+        title: Text('加载失败，请重试'),
+        children: <Widget>[
+          SimpleDialogOption(
+            onPressed: _searchResults,
+            child: Text('确定'),
+          )
+        ],
+      );
+    });
   }
+
+  void _loadMore() {
+    if (_isLoadingMore) {
+      return;
+    }
+    _pageIndex++;
+    setState(() {
+      _isLoadingMore = true;
+    });
+    request.getSearchResults(_input, _pageIndex).then((res) {
+      setState(() {
+        _total = res['total'];
+        for (var item in res['results']) {
+          _results.add(item);
+        }
+        _isLoadingMore = false;
+      });
+      _textEditingController.clear();
+    }).catchError((err) {
+      setState(() {
+        _isLoadingMore = false;
+      });
+      new SimpleDialog(
+        title: Text('加载失败，请重试'),
+        children: <Widget>[
+          SimpleDialogOption(
+            onPressed: _loadMore,
+            child: Text('确定'),
+          )
+        ],
+      );
+    });
+  }
+
+  void _showSuggestions() {}
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        elevation: 5.0,
         title: TextField(
+          autocorrect: false,
+          autofocus: true,
           controller: _textEditingController,
           decoration: InputDecoration(
-            prefixIcon: Padding(
-              padding: const EdgeInsets.only(right: 8.0),
-              child: Icon(
-                Icons.search,
-                size: 28.0,
-                color: Colors.white70,
-              ),
-            ),
-            filled: true,
             border: InputBorder.none,
             hintText: '搜索',
             hintStyle: TextStyle(
               color: Colors.white70,
-              fontSize: 16.0,
+              fontSize: 18.0,
             ),
           ),
           style: TextStyle(
@@ -67,93 +123,61 @@ class _SearchPageState extends State<SearchPage> {
             decoration: TextDecoration.none,
           ),
           onChanged: (val) {
-            print('Change: $val');
-            showSuggestions();
+            setState(() {
+              _input = val;
+            });
+            _showSuggestions();
           },
           onSubmitted: (String val) {
-            setState(() {
-              _isSearching = true;
-            });
-            if (val.isNotEmpty) {
-              request.getSearchResults(val).then((res) {
-                setState(() {
-                  print(res['total']);
-                  _total = res['total'];
-                  _results = res['results'];
-                  _isSearching = false;
-                });
-                _textEditingController.clear();
-                showSnackBar(_total);
-              });
-            }
+            _searchResults();
           },
         ),
         actions: <Widget>[
-          IconButton(
-            icon: Icon(Icons.more_vert),
-            iconSize: 28.0,
-            onPressed: () {
-//              Navigator.push(context, MaterialPageRoute(builder: (context) => DetailPage('react')));
+          PopupMenuButton(
+            itemBuilder: (BuildContext context) {
+              return [
+                PopupMenuItem(
+                  value: 0,
+                  child: SwitchListTile(
+                    title: Text('111'),
+                    value: false,
+                    onChanged: (val) {
+                      setState(() {});
+                    },
+                  ),
+                ),
+              ];
             },
-          ),
+            icon: Icon(Icons.more_vert),
+          )
         ],
       ),
-      body: Stack(
-        children: [
-          _isSearching ? LinearProgressIndicator() : Container(),
-          AnimatedCrossFade(
-            firstChild: ListView.builder(
-              shrinkWrap: true,
-              itemCount: _results.length,
-              itemBuilder: (BuildContext context, int index) {
-                return CardResult(_results[index]);
+      body: Stack(children: [
+        AnimatedCrossFade(
+          firstChild: Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: NotificationListener(
+              onNotification: (ScrollNotification note) {
+                if (note.metrics.maxScrollExtent == note.metrics.pixels) {
+                  _loadMore();
+                }
               },
-            ),
-            secondChild: Padding(
-              padding: const EdgeInsets.only(top: 12.0),
-              child: GridView.count(
-                crossAxisCount: 6,
-                primary: false,
-                children: <Widget>[
-                  new ChipHistory(History('rect')),
-                  new ChipHistory(History('vue')),
-                  new ChipHistory(History('express')),
-                  new ChipHistory(History('koa')),
-                  new ChipHistory(History('angular')),
-                  new ChipHistory(History('nest.js')),
-                  new ChipHistory(History('d3')),
-                  new ChipHistory(History('jQuery')),
-                ],
+              child: ListView.builder(
+                shrinkWrap: true,
+                controller: _listViewController,
+                itemCount: _results.length,
+                itemBuilder: (BuildContext context, int index) {
+                  return CardResult(_results[index]);
+                },
               ),
             ),
-            crossFadeState:
-            _results.isNotEmpty ? CrossFadeState.showFirst : CrossFadeState.showSecond,
-            duration: Duration(milliseconds: 300),
           ),
-        ],
-      ),
-    );
-  }
-}
-
-class ChipHistory extends StatelessWidget {
-  final History histoty;
-
-  ChipHistory(this.histoty);
-
-  @override
-  Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.all(8.0),
-      child: ActionChip(
-        label: new Text(histoty.name),
-        onPressed: () {
-          Navigator.push(
-            context,
-            MaterialPageRoute(builder: (context) => DetailPage(histoty.name)),
-          );
-        },
-      ),
+          secondChild: LinearProgressIndicator(),
+          crossFadeState: _isSearching ? CrossFadeState.showSecond : CrossFadeState.showFirst,
+          duration: Duration(milliseconds: 300),
+        ),
+        _isLoadingMore ? Center(child: CircularProgressIndicator()) : Container(),
+      ]),
     );
   }
 }

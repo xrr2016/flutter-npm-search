@@ -56,14 +56,15 @@ class _DetailPageState extends State<DetailPage> with SingleTickerProviderStateM
           tabs: _tabs,
         ),
       ),
-      body: AnimatedCrossFade(
+      body: _detail != null
+          ? AnimatedCrossFade(
         firstChild: TabBarView(
           controller: _tabController,
           children: <Widget>[
             Center(
-              child: Text('0'),
+              child: Text(_detail.collected['metadata']['version']),
             ),
-            Center(child: Text('1')),
+            Center(child: Text(_detail.collected['metadata']['version'])),
             Center(child: Text('2')),
             Center(child: Text('3')),
           ],
@@ -71,6 +72,9 @@ class _DetailPageState extends State<DetailPage> with SingleTickerProviderStateM
         secondChild: Center(child: CircularProgressIndicator()),
         duration: Duration(milliseconds: 300),
         crossFadeState: _isLoading ? CrossFadeState.showSecond : CrossFadeState.showFirst,
+      )
+          : Center(
+        child: CircularProgressIndicator(),
       ),
     );
   }

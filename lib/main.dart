@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_npm_search/page/detail.dart';
+import 'package:flutter_npm_search/page/index.dart';
 import 'package:flutter_npm_search/page/search.dart';
 
 void main() {
@@ -21,7 +22,8 @@ class _NpmSearchAppState extends State<NpmSearchApp> {
       ),
       initialRoute: '/',
       routes: {
-        '/': (context) => SearchPage(),
+        '/': (context) => IndexPage(),
+        '/search': (context) => SearchPage(),
         '/detail': (context) => DetailPage(),
       },
       debugShowCheckedModeBanner: false,

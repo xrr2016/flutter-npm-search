@@ -5,17 +5,27 @@
 数据类有3个，分别是搜索结果类，包详情类以及搜索建议类，有4个页面，首页，搜索页，详情页，web view页面（使用flutter_webview_plugin插件）。
 
 目录结构
+
 ![project](./screen_shot/project.png)
 ## 效果
 首页
+
 ![index](./screen_shot/index.png)
+
 搜索页
+
 ![index](./screen_shot/search_finish.png)
+
 无限加载
+
 ![load](./screen_shot/load_more.png)
+
 详情页
+
 ![index](./screen_shot/detail.png)
-WebView
+
+WebView页面
+
 ![index](./screen_shot/web.png)
 ![gif](./screen_shot/web.gif)
 ## APK

@@ -1,15 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="394e4866-9203-4e5e-a2b7-59f89b4c81f9" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/screen_shot/detail.png" beforeDir="false" afterPath="$PROJECT_DIR$/screen_shot/detail.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/screen_shot/index.png" beforeDir="false" afterPath="$PROJECT_DIR$/screen_shot/index.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/screen_shot/load_more.png" beforeDir="false" afterPath="$PROJECT_DIR$/screen_shot/load_more.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/screen_shot/project.png" beforeDir="false" afterPath="$PROJECT_DIR$/screen_shot/project.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/screen_shot/search.png" beforeDir="false" afterPath="$PROJECT_DIR$/screen_shot/search.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/screen_shot/search_finish.png" beforeDir="false" afterPath="$PROJECT_DIR$/screen_shot/search_finish.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/screen_shot/web.png" beforeDir="false" afterPath="$PROJECT_DIR$/screen_shot/web.png" afterDir="false" />
+    <list default="true" id="394e4866-9203-4e5e-a2b7-59f89b4c81f9" name="Default Changelist" comment="compress imgs">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -42,7 +36,7 @@
           <entry key="gitignore" value="5" />
           <entry key="iml" value="2" />
           <entry key="lock" value="2" />
-          <entry key="md" value="4" />
+          <entry key="md" value="5" />
           <entry key="packages" value="1" />
           <entry key="png" value="21" />
           <entry key="yaml" value="15" />
@@ -56,7 +50,7 @@
           <entry key="Git file" value="5" />
           <entry key="IDEA_MODULE" value="2" />
           <entry key="Image" value="24" />
-          <entry key="Markdown" value="4" />
+          <entry key="Markdown" value="5" />
           <entry key="PLAIN_TEXT" value="3" />
           <entry key="UML" value="1" />
           <entry key="YAML" value="15" />
@@ -66,8 +60,8 @@
         <counts>
           <entry key="dart" value="14459" />
           <entry key="gitignore" value="12" />
-          <entry key="md" value="588" />
-          <entry key="txt" value="274" />
+          <entry key="md" value="613" />
+          <entry key="txt" value="288" />
           <entry key="yaml" value="67" />
         </counts>
       </usages-collector>
@@ -75,8 +69,8 @@
         <counts>
           <entry key="Dart" value="14459" />
           <entry key="Git file" value="12" />
-          <entry key="Markdown" value="588" />
-          <entry key="PLAIN_TEXT" value="274" />
+          <entry key="Markdown" value="613" />
+          <entry key="PLAIN_TEXT" value="288" />
           <entry key="YAML" value="67" />
         </counts>
       </usages-collector>
@@ -90,10 +84,13 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/.gitignore">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="243">
-              <caret line="9" column="6" lean-forward="true" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="6" />
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="414">
+                <caret line="26" column="9" lean-forward="true" selection-start-line="26" selection-start-column="9" selection-end-line="26" selection-end-column="9" />
+              </first_editor>
+              <second_editor />
             </state>
           </provider>
         </entry>
@@ -148,8 +145,8 @@
         <option value="$PROJECT_DIR$/lib/widget/card_result.dart" />
         <option value="$PROJECT_DIR$/lib/main.dart" />
         <option value="$PROJECT_DIR$/pubspec.yaml" />
-        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -220,7 +217,7 @@
     <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file:///Users/xiaoranran/FlutterProjects/flutter-npm-search/lib/page/search.dart" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="add_unversioned_files" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1535137014538" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1535138052105" />
     <property name="dart.analysis.tool.window.force.activate" value="false" />
     <property name="go.gopath.indexing.explicitly.defined" value="true" />
     <property name="io.flutter.reload.alreadyRun" value="true" />
@@ -279,7 +276,7 @@
       <workItem from="1535109323471" duration="3135000" />
       <workItem from="1535117959470" duration="14013000" />
       <workItem from="1535132511398" duration="2686000" />
-      <workItem from="1535135693385" duration="1318000" />
+      <workItem from="1535135693385" duration="2333000" />
     </task>
     <task id="LOCAL-00001" summary="init commit">
       <created>1534953556096</created>
@@ -351,11 +348,18 @@
       <option name="project" value="LOCAL" />
       <updated>1535136827920</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="compress imgs">
+      <created>1535137042449</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1535137042449</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="91272000" />
+    <option name="totallyTimeSpent" value="92287000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="22" width="1680" height="1028" extended-state="0" />
@@ -466,7 +470,8 @@
     <MESSAGE value="add screen shots" />
     <MESSAGE value="push" />
     <MESSAGE value="edit .gitignore" />
-    <option name="LAST_COMMIT_MESSAGE" value="edit .gitignore" />
+    <MESSAGE value="compress imgs" />
+    <option name="LAST_COMMIT_MESSAGE" value="compress imgs" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="editorHistoryManager">
@@ -662,16 +667,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="135">
-            <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="uml://JavaScript-modules-diagram//Users/xiaoranran/FlutterProjects/flutter-npm-search/android">
       <provider selected="true" editor-type-id="UmlEditorProvider">
         <state>
@@ -724,6 +719,16 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="243">
           <caret line="9" column="6" lean-forward="true" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="414">
+            <caret line="26" column="9" lean-forward="true" selection-start-line="26" selection-start-column="9" selection-end-line="26" selection-end-column="9" />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>

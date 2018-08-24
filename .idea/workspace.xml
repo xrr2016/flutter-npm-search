@@ -3,7 +3,13 @@
   <component name="ChangeListManager">
     <list default="true" id="394e4866-9203-4e5e-a2b7-59f89b4c81f9" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/screen_shot/detail.png" beforeDir="false" afterPath="$PROJECT_DIR$/screen_shot/detail.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/screen_shot/index.png" beforeDir="false" afterPath="$PROJECT_DIR$/screen_shot/index.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/screen_shot/load_more.png" beforeDir="false" afterPath="$PROJECT_DIR$/screen_shot/load_more.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/screen_shot/project.png" beforeDir="false" afterPath="$PROJECT_DIR$/screen_shot/project.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/screen_shot/search.png" beforeDir="false" afterPath="$PROJECT_DIR$/screen_shot/search.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/screen_shot/search_finish.png" beforeDir="false" afterPath="$PROJECT_DIR$/screen_shot/search_finish.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/screen_shot/web.png" beforeDir="false" afterPath="$PROJECT_DIR$/screen_shot/web.png" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -32,13 +38,13 @@
           <entry key="apk" value="2" />
           <entry key="dart" value="189" />
           <entry key="exclude" value="1" />
-          <entry key="gif" value="1" />
-          <entry key="gitignore" value="4" />
+          <entry key="gif" value="3" />
+          <entry key="gitignore" value="5" />
           <entry key="iml" value="2" />
           <entry key="lock" value="2" />
           <entry key="md" value="4" />
           <entry key="packages" value="1" />
-          <entry key="png" value="14" />
+          <entry key="png" value="21" />
           <entry key="yaml" value="15" />
         </counts>
       </usages-collector>
@@ -47,9 +53,9 @@
           <entry key="APK" value="2" />
           <entry key="Dart" value="189" />
           <entry key="Git exclude file" value="1" />
-          <entry key="Git file" value="4" />
+          <entry key="Git file" value="5" />
           <entry key="IDEA_MODULE" value="2" />
-          <entry key="Image" value="15" />
+          <entry key="Image" value="24" />
           <entry key="Markdown" value="4" />
           <entry key="PLAIN_TEXT" value="3" />
           <entry key="UML" value="1" />
@@ -59,18 +65,18 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dart" value="14459" />
-          <entry key="gitignore" value="9" />
+          <entry key="gitignore" value="12" />
           <entry key="md" value="588" />
-          <entry key="txt" value="253" />
+          <entry key="txt" value="274" />
           <entry key="yaml" value="67" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="Dart" value="14459" />
-          <entry key="Git file" value="9" />
+          <entry key="Git file" value="12" />
           <entry key="Markdown" value="588" />
-          <entry key="PLAIN_TEXT" value="253" />
+          <entry key="PLAIN_TEXT" value="274" />
           <entry key="YAML" value="67" />
         </counts>
       </usages-collector>
@@ -86,8 +92,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="324">
-              <caret line="12" column="6" selection-start-line="12" selection-start-column="6" selection-end-line="12" selection-end-column="6" />
+            <state relative-caret-position="243">
+              <caret line="9" column="6" lean-forward="true" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="6" />
             </state>
           </provider>
         </entry>
@@ -214,7 +220,7 @@
     <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file:///Users/xiaoranran/FlutterProjects/flutter-npm-search/lib/page/search.dart" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="add_unversioned_files" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1535136769918" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1535137014538" />
     <property name="dart.analysis.tool.window.force.activate" value="false" />
     <property name="go.gopath.indexing.explicitly.defined" value="true" />
     <property name="io.flutter.reload.alreadyRun" value="true" />
@@ -273,7 +279,7 @@
       <workItem from="1535109323471" duration="3135000" />
       <workItem from="1535117959470" duration="14013000" />
       <workItem from="1535132511398" duration="2686000" />
-      <workItem from="1535135693385" duration="1074000" />
+      <workItem from="1535135693385" duration="1318000" />
     </task>
     <task id="LOCAL-00001" summary="init commit">
       <created>1534953556096</created>
@@ -338,11 +344,18 @@
       <option name="project" value="LOCAL" />
       <updated>1535136128974</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="edit .gitignore">
+      <created>1535136827920</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1535136827920</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="91028000" />
+    <option name="totallyTimeSpent" value="91272000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="22" width="1680" height="1028" extended-state="0" />
@@ -452,7 +465,9 @@
     <MESSAGE value="add feature, add web view page, modify previous page, edit readme" />
     <MESSAGE value="add screen shots" />
     <MESSAGE value="push" />
-    <option name="LAST_COMMIT_MESSAGE" value="push" />
+    <MESSAGE value="edit .gitignore" />
+    <option name="LAST_COMMIT_MESSAGE" value="edit .gitignore" />
+    <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/test/widget_test.dart" />
@@ -630,30 +645,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/screen_shot/load_more.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/screen_shot/index.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/screen_shot/detail.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/screen_shot/search.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/screen_shot/search_finish.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/screen_shot/web.gif">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/screen_shot/web.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/screen_shot/project.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/app-release.apk">
       <provider selected="true" editor-type-id="apk-viewer" />
     </entry>
@@ -705,10 +696,34 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/screen_shot/search_finish.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/screen_shot/search.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/screen_shot/project.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/screen_shot/load_more.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/screen_shot/index.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/screen_shot/detail.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/screen_shot/web.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/screen_shot/web.gif">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="12" column="6" selection-start-line="12" selection-start-column="6" selection-end-line="12" selection-end-column="6" />
+        <state relative-caret-position="243">
+          <caret line="9" column="6" lean-forward="true" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="6" />
         </state>
       </provider>
     </entry>

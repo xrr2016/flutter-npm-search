@@ -19,7 +19,7 @@ class Request {
     String q, [
     int from = 0,
     int size = 20,
-        String filter = '',
+    String filter = '',
   ]) async {
     final response = await http.get(baseUrl + '/search?q=$q$filter&from=$from&size=$size');
     final data = json.decode(response.body);

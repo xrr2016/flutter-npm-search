@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+
 import 'package:flutter_npm_search/request/request.dart';
 import 'package:flutter_npm_search/widget/card_result.dart';
 

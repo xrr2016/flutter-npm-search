@@ -7,13 +7,15 @@ class Result {
   final double score;
   final double searchScore;
 
-  Result({this.package,
+  Result({
+    this.package,
     this.publish,
     this.name,
     this.version,
     this.description,
     this.score,
-    this.searchScore});
+    this.searchScore,
+  });
 
   factory Result.fromJson(Map<String, dynamic> json) {
     final date = json['package']['date'];

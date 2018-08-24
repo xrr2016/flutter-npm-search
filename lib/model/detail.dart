@@ -4,7 +4,12 @@ class Detail {
   final Map<String, dynamic> evaluation;
   final Map<String, dynamic> score;
 
-  Detail({this.analyzedAt, this.collected, this.evaluation, this.score});
+  Detail({
+    this.analyzedAt,
+    this.collected,
+    this.evaluation,
+    this.score,
+  });
 
   factory Detail.fromJson(Map<String, dynamic> json) {
     return Detail(

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+
 import 'package:flutter_npm_search/model/result.dart';
 import 'package:flutter_npm_search/page/detail.dart';
 

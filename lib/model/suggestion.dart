@@ -4,7 +4,12 @@ class Suggestion {
   final searchScore;
   final String highlight;
 
-  Suggestion({this.package, this.score, this.searchScore, this.highlight});
+  Suggestion({
+    this.package,
+    this.score,
+    this.searchScore,
+    this.highlight,
+  });
 
   factory Suggestion.fromJson(Map<String, dynamic> json) {
     return Suggestion(

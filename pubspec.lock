@@ -103,7 +103,7 @@ packages:
     source: hosted
     version: "1.1.5"
   html:
-    dependency: "direct main"
+    dependency: transitive
     description:
       name: html
       url: "https://pub.flutter-io.cn"

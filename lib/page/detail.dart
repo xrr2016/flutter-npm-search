@@ -73,19 +73,19 @@ class _DetailPageState extends State<DetailPage> with SingleTickerProviderStateM
       ),
       body: _detail != null
           ? AnimatedCrossFade(
-        firstChild: TabBarView(
-          controller: _tabController,
-          children: <Widget>[
-            ReadmeView(_detail),
-            StatsView(_detail),
-            ScoreView(_detail),
-            MaintainersView(_detail),
-          ],
-        ),
-        secondChild: Center(child: CircularProgressIndicator()),
-        duration: Duration(milliseconds: 300),
-        crossFadeState: _isLoading ? CrossFadeState.showSecond : CrossFadeState.showFirst,
-      )
+              firstChild: TabBarView(
+                controller: _tabController,
+                children: <Widget>[
+                  ReadmeView(_detail),
+                  StatsView(_detail),
+                  ScoreView(_detail),
+                  MaintainersView(_detail),
+                ],
+              ),
+              secondChild: Center(child: CircularProgressIndicator()),
+              duration: Duration(milliseconds: 300),
+              crossFadeState: _isLoading ? CrossFadeState.showSecond : CrossFadeState.showFirst,
+            )
           : Center(child: CircularProgressIndicator()),
     );
   }
@@ -125,7 +125,7 @@ class ReadmeView extends StatelessWidget {
         : '';
 
     List badges =
-    _detail.collected['source']['badges'] != null ? _detail.collected['source']['badges'] : [];
+        _detail.collected['source']['badges'] != null ? _detail.collected['source']['badges'] : [];
     List _badges = badges.map((badge) {
       return Padding(
         padding: const EdgeInsets.only(right: 8.0),

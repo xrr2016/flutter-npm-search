@@ -13,8 +13,25 @@ class _SearchPageState extends State<SearchPage> {
   int _total = 0;
   int _pageIndex = 0;
   String _input = '';
-  String _prev_input = '';
+  String _prevInput = '';
   List _results = [];
+  List _filters = [
+    'scope:types',
+    'author:sindresorhus',
+    'maintainer:sindresorhus',
+    'keywords:gulpplugin',
+    'not:deprecated',
+    'not:unstable',
+    'not:insecure',
+    'is:deprecated',
+    'is:unstable',
+    'is:insecure',
+    'boost-exact:false',
+    'score-effect:14',
+    'quality-weight:1',
+    'popularity-weight:1',
+    'maintenance-weight:1'
+  ];
   bool _isSearching = false;
   bool _isLoadingMore = false;
 
@@ -31,12 +48,12 @@ class _SearchPageState extends State<SearchPage> {
     if (_input.isEmpty || _input == '') {
       return;
     }
-    if (_input == _prev_input) {
+    if (_input == _prevInput) {
       return;
     }
     setState(() {
       _isSearching = true;
-      _prev_input = _input;
+      _prevInput = _input;
       _results.clear();
     });
     request.getSearchResults(_input, _pageIndex).then((res) {
@@ -135,18 +152,18 @@ class _SearchPageState extends State<SearchPage> {
         actions: <Widget>[
           PopupMenuButton(
             itemBuilder: (BuildContext context) {
-              return [
-                PopupMenuItem(
-                  value: 0,
+              return _filters.map((f) {
+                return PopupMenuItem(
+                  value: f,
                   child: SwitchListTile(
-                    title: Text('111'),
+                    title: Text(f),
                     value: false,
                     onChanged: (val) {
                       setState(() {});
                     },
                   ),
-                ),
-              ];
+                );
+              }).toList();
             },
             icon: Icon(Icons.more_vert),
           )

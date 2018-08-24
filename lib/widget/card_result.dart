@@ -17,16 +17,20 @@ class CardResult extends StatelessWidget {
           subtitle: Column(
             children: <Widget>[
               Padding(
-                padding: EdgeInsets.only(top: 8.0, bottom: 8.0),
+                padding: EdgeInsets.symmetric(vertical: 8.0),
                 child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: <Widget>[
-                    Padding(
-                      padding: const EdgeInsets.only(right: 8.0),
-                      child: Text(result.package['publisher']['username']),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.only(right: 8.0),
-                      child: Text('Last publish at: '),
+                    Container(
+                      width: 100.0,
+                      child: Padding(
+                        padding: const EdgeInsets.only(right: 4.0),
+                        child: Text(
+                          result.package['publisher']['username'],
+                          maxLines: 1,
+                          overflow: TextOverflow.ellipsis,
+                        ),
+                      ),
                     ),
                     Text(result.publish),
                   ],

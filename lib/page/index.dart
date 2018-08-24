@@ -9,7 +9,6 @@ class IndexPage extends StatefulWidget {
 
 class _IndexPageState extends State<IndexPage> {
   bool _isNightMode = false;
-  List _hots = ['flutter', 'react', 'vue', 'lodash', 'axios', 'angular', 'express'];
 
   @override
   Widget build(BuildContext context) {
@@ -61,22 +60,55 @@ class _IndexPageState extends State<IndexPage> {
           )
         ],
       ),
-      body: ListView.builder(
-        itemCount: _hots.length,
-        itemBuilder: (BuildContext context, int index) {
-          return InkWell(
-            onTap: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => DetailPage(_hots[index])),
-              );
-            },
-            child: ListTile(
-              title: Text(_hots[index]),
-            ),
-          );
-        },
+      body: ListView(
+        padding: const EdgeInsets.only(top: 12.0, left: 12.0, right: 12.0, bottom: 24.0),
+        children: <Widget>[
+          Padding(
+            padding: const EdgeInsets.only(bottom: 8.0, top: 8.0),
+            child: Text('热门搜索:', style: TextStyle(fontSize: 16.0)),
+          ),
+          PackageItem('lodash'),
+          PackageItem('request'),
+          PackageItem('chalk'),
+          PackageItem('react'),
+          PackageItem('express'),
+          PackageItem('async'),
+          PackageItem('commander'),
+          PackageItem('moment'),
+          PackageItem('bluebird'),
+          PackageItem('debug'),
+          PackageItem('prop-types'),
+          PackageItem('react-dom'),
+          Divider(),
+          Padding(
+            padding: const EdgeInsets.only(bottom: 8.0, top: 8.0),
+            child: Text('历史搜索:', style: TextStyle(fontSize: 16.0)),
+          ),
+          PackageItem('react'),
+          PackageItem('vue'),
+          PackageItem('d3'),
+          PackageItem('axios'),
+        ],
       ),
+    );
+  }
+}
+
+class PackageItem extends StatelessWidget {
+  final String name;
+
+  PackageItem(this.name);
+
+  @override
+  Widget build(BuildContext context) {
+    return ListTile(
+      title: Text(name),
+      onTap: () {
+        Navigator.push(
+          context,
+          MaterialPageRoute(builder: (context) => DetailPage(name)),
+        );
+      },
     );
   }
 }

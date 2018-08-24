@@ -8,10 +8,10 @@ class Detail {
 
   factory Detail.fromJson(Map<String, dynamic> json) {
     return Detail(
-      analyzedAt: json['analyzedAt'] as String,
-      collected: json['collected'] as Map,
-      evaluation: json['evaluation'] as Map,
-      score: json['score'] as Map,
+      analyzedAt: json['analyzedAt'],
+      collected: json['collected'],
+      evaluation: json['evaluation'],
+      score: json['score'],
     );
   }
 }
